@@ -1,0 +1,400 @@
+[0;34mUsing docker and docker-compose[0m
+[0;34mStopping network[0m
+[0;34mRemoving remaining containers[0m
+[0;34mRemoving generated chaincode docker images[0m
+[0;34mUsing docker and docker-compose[0m
+[0;34mCreating channel 'supplychain'.[0m
+[0;34mIf network is not up, starting nodes with CLI timeout of '5' tries and CLI delay of '3' seconds and using database 'couchdb with crypto from 'Certificate Authorities'[0m
+[0;34mBringing up network[0m
+[0;34mLOCAL_VERSION=2.3.3[0m
+[0;34mDOCKER_IMAGE_VERSION=2.3.3[0m
+[0;34mCA_LOCAL_VERSION=1.5.2[0m
+[0;34mCA_DOCKER_IMAGE_VERSION=1.5.2[0m
+[0;34mGenerating certificates using Fabric CA[0m
+Creating network "fabric_test" with the default driver
+Creating network "compose_default" with the default driver
+Creating ca_orderer ... 
+Creating ca_org4    ... 
+Creating ca_org3    ... 
+Creating ca_org2    ... 
+Creating ca_org1    ... 
+Creating ca_org5    ... 
+[4A[2KCreating ca_org3    ... [32mdone[0m[4B[1A[2KCreating ca_org5    ... [32mdone[0m[1B[5A[2KCreating ca_org4    ... [32mdone[0m[5B[3A[2KCreating ca_org2    ... [32mdone[0m[3B[2A[2KCreating ca_org1    ... [32mdone[0m[2B[6A[2KCreating ca_orderer ... [32mdone[0m[6B[0;34mCreating Org1 Identities[0m
+[0;34mEnrolling the CA admin[0m
+[0;34mRegistering peer0[0m
+Password: peer0pw
+[0;34mRegistering user[0m
+Password: user1pw
+[0;34mRegistering the org admin[0m
+Password: org1adminpw
+[0;34mGenerating the peer0 msp[0m
+[0;34mGenerating the peer0-tls certificates[0m
+[0;34mGenerating the user msp[0m
+[0;34mGenerating the org admin msp[0m
+[0;34mCreating Org2 Identities[0m
+[0;34mEnrolling the CA admin[0m
+[0;34mRegistering peer0[0m
+Password: peer0pw
+[0;34mRegistering user[0m
+Password: user1pw
+[0;34mRegistering the org admin[0m
+Password: org2adminpw
+[0;34mGenerating the peer0 msp[0m
+[0;34mGenerating the peer0-tls certificates[0m
+[0;34mGenerating the user msp[0m
+[0;34mGenerating the org admin msp[0m
+[0;34mCreating Org3 Identities[0m
+[0;34mEnrolling the CA admin[0m
+[0;34mRegistering peer0[0m
+[0;34mRegistering user[0m
+[0;34mRegistering the org admin[0m
+[0;34mGenerating the peer0 msp[0m
+[0;34mGenerating the peer0-tls certificates[0m
+[0;34mGenerating the user msp[0m
+[0;34mGenerating the org admin msp[0m
+[0;34mCreating Org4 Identities[0m
+[0;34mEnrolling the CA admin[0m
+[0;34mRegistering peer0[0m
+[0;34mRegistering user[0m
+[0;34mRegistering the org admin[0m
+[0;34mGenerating the peer0 msp[0m
+[0;34mGenerating the peer0-tls certificates[0m
+[0;34mGenerating the user msp[0m
+[0;34mGenerating the org admin msp[0m
+[0;34mCreating Org5 Identities[0m
+[0;34mEnrolling the CA admin[0m
+[0;34mRegistering peer0[0m
+[0;34mRegistering user[0m
+[0;34mRegistering the org admin[0m
+[0;34mGenerating the peer0 msp[0m
+[0;34mGenerating the peer0-tls certificates[0m
+[0;34mGenerating the user msp[0m
+[0;34mGenerating the org admin msp[0m
+[0;34mCreating Orderer Org Identities[0m
+[0;34mEnrolling the CA admin[0m
+[0;34mRegistering orderer[0m
+Password: ordererpw
+[0;34mRegistering the orderer admin[0m
+Password: ordererAdminpw
+[0;34mGenerating the orderer msp[0m
+[0;34mGenerating the orderer-tls certificates[0m
+[0;34mGenerating the admin msp[0m
+[0;34mGenerating CCP files for Org1, Org2, Org3, Org4, Org5[0m
+Creating volume "compose_orderer.example.com" with default driver
+Creating volume "compose_peer0.org1.manufacturer.com" with default driver
+Creating volume "compose_peer0.org2.wholesaler.com" with default driver
+Creating volume "compose_peer0.org3.pharmacist.com" with default driver
+Creating volume "compose_peer0.org4.patient.com" with default driver
+Creating volume "compose_peer0.org5.auditor.com" with default driver
+Found orphan containers (ca_org2, ca_orderer, ca_org3, ca_org4, ca_org5, ca_org1) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up.
+Creating couchdb0 ... 
+Creating couchdb4 ... 
+Creating orderer.example.com ... 
+Creating couchdb2            ... 
+Creating couchdb3            ... 
+Creating couchdb1            ... 
+[6A[2KCreating couchdb0            ... [32mdone[0m[6BCreating peer0.org1.manufacturer.com ... 
+[2A[2KCreating couchdb1                    ... [32mdone[0m[2BCreating peer0.org2.wholesaler.com   ... 
+[7A[2KCreating couchdb4                    ... [32mdone[0m[7BCreating peer0.org5.auditor.com      ... 
+[5A[2KCreating couchdb3                    ... [32mdone[0m[5BCreating peer0.org4.patient.com      ... 
+[7A[2KCreating couchdb2                    ... [32mdone[0m[7BCreating peer0.org3.pharmacist.com   ... 
+[9A[2KCreating orderer.example.com         ... [32mdone[0m[9B[4A[2KCreating peer0.org2.wholesaler.com   ... [32mdone[0m[4B[2A[2KCreating peer0.org4.patient.com      ... [32mdone[0m[2B[5A[2KCreating peer0.org1.manufacturer.com ... [32mdone[0m[5B[3A[2KCreating peer0.org5.auditor.com      ... [32mdone[0m[3B[1A[2KCreating peer0.org3.pharmacist.com   ... [32mdone[0m[1BCreating cli                         ... 
+[1A[2KCreating cli                         ... [32mdone[0m[1BCONTAINER ID   IMAGE                               COMMAND                  CREATED          STATUS                  PORTS                                                                                                                                               NAMES
+8a8200b49047   hyperledger/fabric-tools:latest     "/bin/bash"              1 second ago     Up Less than a second                                                                                                                                                       cli
+5a26a5160534   hyperledger/fabric-peer:latest      "peer node start"        4 seconds ago    Up 1 second             0.0.0.0:9446->9446/tcp, :::9446->9446/tcp, 0.0.0.0:11051->11051/tcp, :::11051->11051/tcp, 7051/tcp, 0.0.0.0:11445->11445/tcp, :::11445->11445/tcp   peer0.org3.pharmacist.com
+99b3788be2c2   hyperledger/fabric-peer:latest      "peer node start"        5 seconds ago    Up 2 seconds            0.0.0.0:9447->9447/tcp, :::9447->9447/tcp, 7051/tcp, 0.0.0.0:12051->12051/tcp, :::12051->12051/tcp                                                  peer0.org4.patient.com
+c7023f4826c0   hyperledger/fabric-peer:latest      "peer node start"        6 seconds ago    Up 1 second             7051/tcp, 0.0.0.0:13051->13051/tcp, :::13051->13051/tcp                                                                                             peer0.org5.auditor.com
+427bbe3746f6   hyperledger/fabric-peer:latest      "peer node start"        6 seconds ago    Up 2 seconds            0.0.0.0:9051->9051/tcp, :::9051->9051/tcp, 0.0.0.0:9445->9445/tcp, :::9445->9445/tcp, 7051/tcp, 0.0.0.0:19051->19051/tcp, :::19051->19051/tcp       peer0.org2.wholesaler.com
+6baf0f1c508c   hyperledger/fabric-peer:latest      "peer node start"        7 seconds ago    Up 2 seconds            0.0.0.0:7051->7051/tcp, :::7051->7051/tcp, 0.0.0.0:9444->9444/tcp, :::9444->9444/tcp                                                                peer0.org1.manufacturer.com
+1728a13a48a2   couchdb:3.1.1                       "tini -- /docker-ent…"   8 seconds ago    Up 3 seconds            4369/tcp, 9100/tcp, 0.0.0.0:9984->5984/tcp, :::9984->5984/tcp                                                                                       couchdb2
+10b2daf1aac5   couchdb:3.1.1                       "tini -- /docker-ent…"   9 seconds ago    Up 6 seconds            4369/tcp, 9100/tcp, 0.0.0.0:7984->5984/tcp, :::7984->5984/tcp                                                                                       couchdb1
+f1d4ca4b01f2   couchdb:3.1.1                       "tini -- /docker-ent…"   9 seconds ago    Up 5 seconds            4369/tcp, 9100/tcp, 0.0.0.0:3984->5984/tcp, :::3984->5984/tcp                                                                                       couchdb3
+37a2575555bc   couchdb:3.1.1                       "tini -- /docker-ent…"   9 seconds ago    Up 6 seconds            4369/tcp, 9100/tcp, 0.0.0.0:4984->5984/tcp, :::4984->5984/tcp                                                                                       couchdb4
+0418eff790d5   hyperledger/fabric-orderer:latest   "orderer"                9 seconds ago    Up 3 seconds            0.0.0.0:7050->7050/tcp, :::7050->7050/tcp, 0.0.0.0:7053->7053/tcp, :::7053->7053/tcp, 0.0.0.0:9443->9443/tcp, :::9443->9443/tcp                     orderer.example.com
+252f928bef69   couchdb:3.1.1                       "tini -- /docker-ent…"   9 seconds ago    Up 6 seconds            4369/tcp, 9100/tcp, 0.0.0.0:5984->5984/tcp, :::5984->5984/tcp                                                                                       couchdb0
+a06fb5b22f94   hyperledger/fabric-ca:latest        "sh -c 'fabric-ca-se…"   23 seconds ago   Up 21 seconds           0.0.0.0:6054->6054/tcp, :::6054->6054/tcp, 0.0.0.0:16054->16054/tcp, :::16054->16054/tcp, 7054/tcp                                                  ca_org3
+12f023d86c46   hyperledger/fabric-ca:latest        "sh -c 'fabric-ca-se…"   23 seconds ago   Up 20 seconds           0.0.0.0:4054->4054/tcp, :::4054->4054/tcp, 0.0.0.0:14054->14054/tcp, :::14054->14054/tcp, 7054/tcp                                                  ca_org5
+76170312b18d   hyperledger/fabric-ca:latest        "sh -c 'fabric-ca-se…"   23 seconds ago   Up 19 seconds           0.0.0.0:7054->7054/tcp, :::7054->7054/tcp, 0.0.0.0:17054->17054/tcp, :::17054->17054/tcp                                                            ca_org1
+3aeb3d4a707d   hyperledger/fabric-ca:latest        "sh -c 'fabric-ca-se…"   23 seconds ago   Up 19 seconds           0.0.0.0:8054->8054/tcp, :::8054->8054/tcp, 7054/tcp, 0.0.0.0:18054->18054/tcp, :::18054->18054/tcp                                                  ca_org2
+929acdcbeb61   hyperledger/fabric-ca:latest        "sh -c 'fabric-ca-se…"   23 seconds ago   Up 20 seconds           0.0.0.0:5054->5054/tcp, :::5054->5054/tcp, 0.0.0.0:15054->15054/tcp, :::15054->15054/tcp, 7054/tcp                                                  ca_org4
+6e0928dded12   hyperledger/fabric-ca:latest        "sh -c 'fabric-ca-se…"   23 seconds ago   Up 19 seconds           0.0.0.0:9054->9054/tcp, :::9054->9054/tcp, 7054/tcp, 0.0.0.0:19054->19054/tcp, :::19054->19054/tcp                                                  ca_orderer
+[0;34mUsing docker and docker-compose[0m
+[0;34mGenerating channel genesis block 'supplychain.block'[0m
+/home/mkaif/Desktop/SupplyChain/fabric-samples/network/../bin/configtxgen
+[0;34mCreating channel supplychain[0m
+[0;34mUsing organization 1[0m
+Status: 201
+{
+	"name": "supplychain",
+	"url": "/participation/v1/channels/supplychain",
+	"consensusRelation": "consenter",
+	"status": "active",
+	"height": 1
+}
+
+[0;32mChannel 'supplychain' created[0m
+[0;34mJoining org1 peer to the channel...[0m
+[0;34mUsing organization 1[0m
+[34m2022-06-15 23:12:07.182 IST [channelCmd] InitCmdFactory -> INFO 001[0m Endorser and orderer connections initialized
+[34m2022-06-15 23:12:07.451 IST [channelCmd] executeJoin -> INFO 002[0m Successfully submitted proposal to join channel
+[0;34mJoining org2 peer to the channel...[0m
+[0;34mUsing organization 2[0m
+[34m2022-06-15 23:12:10.588 IST [channelCmd] InitCmdFactory -> INFO 001[0m Endorser and orderer connections initialized
+[34m2022-06-15 23:12:10.897 IST [channelCmd] executeJoin -> INFO 002[0m Successfully submitted proposal to join channel
+[0;34mJoining org3 peer to the channel...[0m
+[0;34mUsing organization 3[0m
+[34m2022-06-15 23:12:14.019 IST [channelCmd] InitCmdFactory -> INFO 001[0m Endorser and orderer connections initialized
+[34m2022-06-15 23:12:14.342 IST [channelCmd] executeJoin -> INFO 002[0m Successfully submitted proposal to join channel
+[0;34mJoining org4 peer to the channel...[0m
+[0;34mUsing organization 4[0m
+[34m2022-06-15 23:12:17.432 IST [channelCmd] InitCmdFactory -> INFO 001[0m Endorser and orderer connections initialized
+[34m2022-06-15 23:12:17.701 IST [channelCmd] executeJoin -> INFO 002[0m Successfully submitted proposal to join channel
+[0;34mJoining org5 peer to the channel...[0m
+[0;34mUsing organization 5[0m
+[34m2022-06-15 23:12:20.780 IST [channelCmd] InitCmdFactory -> INFO 001[0m Endorser and orderer connections initialized
+[34m2022-06-15 23:12:21.029 IST [channelCmd] executeJoin -> INFO 002[0m Successfully submitted proposal to join channel
+[0;34mSetting anchor peer for org1...[0m
+[0;34mUsing organization 1[0m
+[0;34mFetching channel config for channel supplychain[0m
+[0;34mUsing organization 1[0m
+[0;34mFetching the most recent configuration block for the channel[0m
+[0;34mDecoding config block to JSON and isolating config to Org1MSPconfig.json[0m
+[0;34mGenerating anchor peer update transaction for Org1 on channel supplychain[0m
+[34m2022-06-15 17:42:21.780 UTC [channelCmd] InitCmdFactory -> INFO 001[0m Endorser and orderer connections initialized
+[34m2022-06-15 17:42:21.808 UTC [channelCmd] update -> INFO 002[0m Successfully submitted channel update
+[0;32mAnchor peer set for org 'Org1MSP' on channel 'supplychain'[0m
+[0;34mSetting anchor peer for org2...[0m
+[0;34mUsing organization 2[0m
+[0;34mFetching channel config for channel supplychain[0m
+[0;34mUsing organization 2[0m
+[0;34mFetching the most recent configuration block for the channel[0m
+[0;34mDecoding config block to JSON and isolating config to Org2MSPconfig.json[0m
+[0;34mGenerating anchor peer update transaction for Org2 on channel supplychain[0m
+[34m2022-06-15 17:42:22.706 UTC [channelCmd] InitCmdFactory -> INFO 001[0m Endorser and orderer connections initialized
+[34m2022-06-15 17:42:22.736 UTC [channelCmd] update -> INFO 002[0m Successfully submitted channel update
+[0;32mAnchor peer set for org 'Org2MSP' on channel 'supplychain'[0m
+[0;34mSetting anchor peer for org3...[0m
+[0;34mUsing organization 3[0m
+[0;34mFetching channel config for channel supplychain[0m
+[0;34mUsing organization 3[0m
+[0;34mFetching the most recent configuration block for the channel[0m
+[0;34mDecoding config block to JSON and isolating config to Org3MSPconfig.json[0m
+[0;34mGenerating anchor peer update transaction for Org3 on channel supplychain[0m
+[34m2022-06-15 17:42:23.593 UTC [channelCmd] InitCmdFactory -> INFO 001[0m Endorser and orderer connections initialized
+[34m2022-06-15 17:42:23.622 UTC [channelCmd] update -> INFO 002[0m Successfully submitted channel update
+[0;32mAnchor peer set for org 'Org3MSP' on channel 'supplychain'[0m
+[0;34mSetting anchor peer for org4...[0m
+[0;34mUsing organization 4[0m
+[0;34mFetching channel config for channel supplychain[0m
+[0;34mUsing organization 4[0m
+[0;34mFetching the most recent configuration block for the channel[0m
+[0;34mDecoding config block to JSON and isolating config to Org4MSPconfig.json[0m
+[0;34mGenerating anchor peer update transaction for Org4 on channel supplychain[0m
+[34m2022-06-15 17:42:24.512 UTC [channelCmd] InitCmdFactory -> INFO 001[0m Endorser and orderer connections initialized
+[34m2022-06-15 17:42:24.540 UTC [channelCmd] update -> INFO 002[0m Successfully submitted channel update
+[0;32mAnchor peer set for org 'Org4MSP' on channel 'supplychain'[0m
+[0;34mSetting anchor peer for org5...[0m
+[0;34mUsing organization 5[0m
+[0;31mORG Unknown[0m
+[0;34mFetching channel config for channel supplychain[0m
+[0;34mUsing organization 5[0m
+[0;34mFetching the most recent configuration block for the channel[0m
+[0;34mDecoding config block to JSON and isolating config to Org5MSPconfig.json[0m
+[0;34mGenerating anchor peer update transaction for Org5 on channel supplychain[0m
+[34m2022-06-15 17:42:25.477 UTC [channelCmd] InitCmdFactory -> INFO 001[0m Endorser and orderer connections initialized
+[34m2022-06-15 17:42:25.507 UTC [channelCmd] update -> INFO 002[0m Successfully submitted channel update
+[0;32mAnchor peer set for org 'Org5MSP' on channel 'supplychain'[0m
+[0;32mChannel 'supplychain' joined[0m
+[0;34mUsing docker and docker-compose[0m
+[0;34mdeploying chaincode on channel 'supplychain'[0m
+executing with the following
+- CHANNEL_NAME: [0;32msupplychain[0m
+- CC_NAME: [0;32mbasic[0m
+- CC_SRC_PATH: [0;32m../asset-transfer-basic/chaincode-javascript[0m
+- CC_SRC_LANGUAGE: [0;32mjavascript[0m
+- CC_VERSION: [0;32m1.0[0m
+- CC_SEQUENCE: [0;32m1[0m
+- CC_END_POLICY: [0;32mNA[0m
+- CC_COLL_CONFIG: [0;32mNA[0m
+- CC_INIT_FCN: [0;32mNA[0m
+- DELAY: [0;32m3[0m
+- MAX_RETRY: [0;32m5[0m
+- VERBOSE: [0;32mfalse[0m
+[0;32mChaincode is packaged[0m
+[0;34mInstalling chaincode on peer0.org1...[0m
+[0;34mUsing organization 1[0m
+[34m2022-06-15 23:12:34.317 IST [cli.lifecycle.chaincode] submitInstallProposal -> INFO 001[0m Installed remotely: response:<status:200 payload:"\nJbasic_1.0:c7ff38d17c294638d8c72e0641dc32bca019a170e9b9a4119ec966d1805e0194\022\tbasic_1.0" > 
+[34m2022-06-15 23:12:34.317 IST [cli.lifecycle.chaincode] submitInstallProposal -> INFO 002[0m Chaincode code package identifier: basic_1.0:c7ff38d17c294638d8c72e0641dc32bca019a170e9b9a4119ec966d1805e0194
+[0;32mChaincode is installed on peer0.org1[0m
+[0;34mInstall chaincode on peer0.org2...[0m
+[0;34mUsing organization 2[0m
+[34m2022-06-15 23:12:43.287 IST [cli.lifecycle.chaincode] submitInstallProposal -> INFO 001[0m Installed remotely: response:<status:200 payload:"\nJbasic_1.0:c7ff38d17c294638d8c72e0641dc32bca019a170e9b9a4119ec966d1805e0194\022\tbasic_1.0" > 
+[34m2022-06-15 23:12:43.287 IST [cli.lifecycle.chaincode] submitInstallProposal -> INFO 002[0m Chaincode code package identifier: basic_1.0:c7ff38d17c294638d8c72e0641dc32bca019a170e9b9a4119ec966d1805e0194
+[0;32mChaincode is installed on peer0.org2[0m
+[0;34mInstall chaincode on peer0.org3...[0m
+[0;34mUsing organization 3[0m
+[34m2022-06-15 23:12:50.839 IST [cli.lifecycle.chaincode] submitInstallProposal -> INFO 001[0m Installed remotely: response:<status:200 payload:"\nJbasic_1.0:c7ff38d17c294638d8c72e0641dc32bca019a170e9b9a4119ec966d1805e0194\022\tbasic_1.0" > 
+[34m2022-06-15 23:12:50.839 IST [cli.lifecycle.chaincode] submitInstallProposal -> INFO 002[0m Chaincode code package identifier: basic_1.0:c7ff38d17c294638d8c72e0641dc32bca019a170e9b9a4119ec966d1805e0194
+[0;32mChaincode is installed on peer0.org3[0m
+[0;34mInstall chaincode on peer0.org4...[0m
+[0;34mUsing organization 4[0m
+[34m2022-06-15 23:12:58.309 IST [cli.lifecycle.chaincode] submitInstallProposal -> INFO 001[0m Installed remotely: response:<status:200 payload:"\nJbasic_1.0:c7ff38d17c294638d8c72e0641dc32bca019a170e9b9a4119ec966d1805e0194\022\tbasic_1.0" > 
+[34m2022-06-15 23:12:58.310 IST [cli.lifecycle.chaincode] submitInstallProposal -> INFO 002[0m Chaincode code package identifier: basic_1.0:c7ff38d17c294638d8c72e0641dc32bca019a170e9b9a4119ec966d1805e0194
+[0;32mChaincode is installed on peer0.org4[0m
+[0;34mInstall chaincode on peer0.org5...[0m
+[0;34mUsing organization 5[0m
+[34m2022-06-15 23:13:06.850 IST [cli.lifecycle.chaincode] submitInstallProposal -> INFO 001[0m Installed remotely: response:<status:200 payload:"\nJbasic_1.0:c7ff38d17c294638d8c72e0641dc32bca019a170e9b9a4119ec966d1805e0194\022\tbasic_1.0" > 
+[34m2022-06-15 23:13:06.850 IST [cli.lifecycle.chaincode] submitInstallProposal -> INFO 002[0m Chaincode code package identifier: basic_1.0:c7ff38d17c294638d8c72e0641dc32bca019a170e9b9a4119ec966d1805e0194
+[0;32mChaincode is installed on peer0.org5[0m
+[0;34mUsing organization 1[0m
+Installed chaincodes on peer:
+Package ID: basic_1.0:c7ff38d17c294638d8c72e0641dc32bca019a170e9b9a4119ec966d1805e0194, Label: basic_1.0
+[0;32mQuery installed successful on peer0.org1 on channel[0m
+[0;34mUsing organization 1[0m
+[34m2022-06-15 23:13:09.477 IST [chaincodeCmd] ClientWait -> INFO 001[0m txid [edbdf52eadef9672290ccb0323b798712b44ede9ef7974b508f7b0b1c9fd73db] committed with status (VALID) at localhost:7051
+[0;32mChaincode definition approved on peer0.org1 on channel 'supplychain'[0m
+[0;34mUsing organization 1[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.org1 on channel 'supplychain'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.org1, Retry after 3 seconds.[0m
+{
+	"approvals": {
+		"Org1MSP": true,
+		"Org2MSP": false,
+		"Org3MSP": false,
+		"Org4MSP": false,
+		"Org5MSP": false
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.org1 on channel 'supplychain'[0m
+[0;34mUsing organization 2[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.org2 on channel 'supplychain'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.org2, Retry after 3 seconds.[0m
+{
+	"approvals": {
+		"Org1MSP": true,
+		"Org2MSP": false,
+		"Org3MSP": false,
+		"Org4MSP": false,
+		"Org5MSP": false
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.org2 on channel 'supplychain'[0m
+[0;34mUsing organization 2[0m
+[34m2022-06-15 23:13:19.092 IST [chaincodeCmd] ClientWait -> INFO 001[0m txid [9498e0c6f384232d57cfaa7e5dbb491ee2b5d224da9d225493aaeb2cf020ea20] committed with status (VALID) at localhost:9051
+[0;32mChaincode definition approved on peer0.org2 on channel 'supplychain'[0m
+[0;34mUsing organization 3[0m
+[34m2022-06-15 23:13:21.630 IST [chaincodeCmd] ClientWait -> INFO 001[0m txid [23c5bac87b3db6ee718f3456ad493ac69f3c30fbf1ca311575cafcc7ef3aad45] committed with status (VALID) at localhost:11051
+[0;32mChaincode definition approved on peer0.org3 on channel 'supplychain'[0m
+[0;34mUsing organization 4[0m
+[34m2022-06-15 23:13:24.370 IST [chaincodeCmd] ClientWait -> INFO 001[0m txid [1dcceddbd9a1317f8317163d498366f653e10a7334514b7eaed71289b38d0aee] committed with status (VALID) at localhost:12051
+[0;32mChaincode definition approved on peer0.org4 on channel 'supplychain'[0m
+[0;34mUsing organization 5[0m
+[34m2022-06-15 23:13:27.034 IST [chaincodeCmd] ClientWait -> INFO 001[0m txid [de8f309e8d56441a200e2319457138085fbe8d2f6a89e4d1451eab44de09b496] committed with status (VALID) at localhost:13051
+[0;32mChaincode definition approved on peer0.org5 on channel 'supplychain'[0m
+[0;34mUsing organization 1[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.org1 on channel 'supplychain'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.org1, Retry after 3 seconds.[0m
+{
+	"approvals": {
+		"Org1MSP": true,
+		"Org2MSP": true,
+		"Org3MSP": true,
+		"Org4MSP": true,
+		"Org5MSP": true
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.org1 on channel 'supplychain'[0m
+[0;34mUsing organization 2[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.org2 on channel 'supplychain'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.org2, Retry after 3 seconds.[0m
+{
+	"approvals": {
+		"Org1MSP": true,
+		"Org2MSP": true,
+		"Org3MSP": true,
+		"Org4MSP": true,
+		"Org5MSP": true
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.org2 on channel 'supplychain'[0m
+[0;34mUsing organization 3[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.org3 on channel 'supplychain'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.org3, Retry after 3 seconds.[0m
+{
+	"approvals": {
+		"Org1MSP": true,
+		"Org2MSP": true,
+		"Org3MSP": true,
+		"Org4MSP": true,
+		"Org5MSP": true
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.org3 on channel 'supplychain'[0m
+[0;34mUsing organization 4[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.org4 on channel 'supplychain'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.org4, Retry after 3 seconds.[0m
+{
+	"approvals": {
+		"Org1MSP": true,
+		"Org2MSP": true,
+		"Org3MSP": true,
+		"Org4MSP": true,
+		"Org5MSP": true
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.org4 on channel 'supplychain'[0m
+[0;34mUsing organization 5[0m
+[0;34mChecking the commit readiness of the chaincode definition on peer0.org5 on channel 'supplychain'...[0m
+[0;34mAttempting to check the commit readiness of the chaincode definition on peer0.org5, Retry after 3 seconds.[0m
+{
+	"approvals": {
+		"Org1MSP": true,
+		"Org2MSP": true,
+		"Org3MSP": true,
+		"Org4MSP": true,
+		"Org5MSP": true
+	}
+}
+[0;34mChecking the commit readiness of the chaincode definition successful on peer0.org5 on channel 'supplychain'[0m
+[0;34mUsing organization 1[0m
+[0;34mUsing organization 2[0m
+[0;34mUsing organization 3[0m
+[0;34mUsing organization 4[0m
+[0;34mUsing organization 5[0m
+[34m2022-06-15 23:13:45.712 IST [chaincodeCmd] ClientWait -> INFO 001[0m txid [9ed2a9e552fc32fbcedf18810b1d8392b89fddc878244630bc4a7e68b04f0b49] committed with status (VALID) at localhost:12051
+[34m2022-06-15 23:13:45.768 IST [chaincodeCmd] ClientWait -> INFO 002[0m txid [9ed2a9e552fc32fbcedf18810b1d8392b89fddc878244630bc4a7e68b04f0b49] committed with status (VALID) at localhost:7051
+[34m2022-06-15 23:13:45.770 IST [chaincodeCmd] ClientWait -> INFO 003[0m txid [9ed2a9e552fc32fbcedf18810b1d8392b89fddc878244630bc4a7e68b04f0b49] committed with status (VALID) at localhost:9051
+[34m2022-06-15 23:13:45.804 IST [chaincodeCmd] ClientWait -> INFO 004[0m txid [9ed2a9e552fc32fbcedf18810b1d8392b89fddc878244630bc4a7e68b04f0b49] committed with status (VALID) at localhost:13051
+[34m2022-06-15 23:13:45.867 IST [chaincodeCmd] ClientWait -> INFO 005[0m txid [9ed2a9e552fc32fbcedf18810b1d8392b89fddc878244630bc4a7e68b04f0b49] committed with status (VALID) at localhost:11051
+[0;32mChaincode definition committed on channel 'supplychain'[0m
+[0;34mUsing organization 1[0m
+[0;34mQuerying chaincode definition on peer0.org1 on channel 'supplychain'...[0m
+[0;34mAttempting to Query committed status on peer0.org1, Retry after 3 seconds.[0m
+Committed chaincode definition for chaincode 'basic' on channel 'supplychain':
+Version: 1.0, Sequence: 1, Endorsement Plugin: escc, Validation Plugin: vscc, Approvals: [Org1MSP: true, Org2MSP: true, Org3MSP: true, Org4MSP: true, Org5MSP: true]
+[0;32mQuery chaincode definition successful on peer0.org1 on channel 'supplychain'[0m
+[0;34mUsing organization 2[0m
+[0;34mQuerying chaincode definition on peer0.org2 on channel 'supplychain'...[0m
+[0;34mAttempting to Query committed status on peer0.org2, Retry after 3 seconds.[0m
+Committed chaincode definition for chaincode 'basic' on channel 'supplychain':
+Version: 1.0, Sequence: 1, Endorsement Plugin: escc, Validation Plugin: vscc, Approvals: [Org1MSP: true, Org2MSP: true, Org3MSP: true, Org4MSP: true, Org5MSP: true]
+[0;32mQuery chaincode definition successful on peer0.org2 on channel 'supplychain'[0m
+[0;34mUsing organization 3[0m
+[0;34mQuerying chaincode definition on peer0.org3 on channel 'supplychain'...[0m
+[0;34mAttempting to Query committed status on peer0.org3, Retry after 3 seconds.[0m
+Committed chaincode definition for chaincode 'basic' on channel 'supplychain':
+Version: 1.0, Sequence: 1, Endorsement Plugin: escc, Validation Plugin: vscc, Approvals: [Org1MSP: true, Org2MSP: true, Org3MSP: true, Org4MSP: true, Org5MSP: true]
+[0;32mQuery chaincode definition successful on peer0.org3 on channel 'supplychain'[0m
+[0;34mUsing organization 4[0m
+[0;34mQuerying chaincode definition on peer0.org4 on channel 'supplychain'...[0m
+[0;34mAttempting to Query committed status on peer0.org4, Retry after 3 seconds.[0m
+Committed chaincode definition for chaincode 'basic' on channel 'supplychain':
+Version: 1.0, Sequence: 1, Endorsement Plugin: escc, Validation Plugin: vscc, Approvals: [Org1MSP: true, Org2MSP: true, Org3MSP: true, Org4MSP: true, Org5MSP: true]
+[0;32mQuery chaincode definition successful on peer0.org4 on channel 'supplychain'[0m
+[0;34mUsing organization 5[0m
+[0;34mQuerying chaincode definition on peer0.org5 on channel 'supplychain'...[0m
+[0;34mAttempting to Query committed status on peer0.org5, Retry after 3 seconds.[0m
+Committed chaincode definition for chaincode 'basic' on channel 'supplychain':
+Version: 1.0, Sequence: 1, Endorsement Plugin: escc, Validation Plugin: vscc, Approvals: [Org1MSP: true, Org2MSP: true, Org3MSP: true, Org4MSP: true, Org5MSP: true]
+[0;32mQuery chaincode definition successful on peer0.org5 on channel 'supplychain'[0m
+[0;34mChaincode initialization is not required[0m
